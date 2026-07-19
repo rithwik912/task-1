@@ -3,34 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
+    <title>SkillSprint Practice Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="#">SkillSprint</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#todo">To-Do</a>
+            </nav>
+        </header>
 
-    <header>
-        <h1>Welcome to My Webpage</h1>
-    </header>
+        <main class="dashboard">
+            <section class="hero card">
+                <div class="hero-copy">
+                    <p class="eyebrow">HTML • CSS • JavaScript</p>
+                    <h1>Build, style, and interact with confidence.</h1>
+                    <p>Practice responsive layouts, form validation, and DOM manipulation in one polished experience.</p>
+                    <button id="demoButton" class="primary-btn" type="button">Try the Demo</button>
+                </div>
+                <div class="hero-visual">
+                    <div class="mini-card">Flexbox Navigation</div>
+                    <div class="mini-card">CSS Grid Layout</div>
+                    <div class="mini-card">Interactive Forms</div>
+                </div>
+            </section>
 
-    <main>
-        <h2>About HTML</h2>
-        <p>
-            HTML (HyperText Markup Language) is the standard language used to create webpages.
-        </p>
+            <section class="info-grid">
+                <article id="about" class="card">
+                    <h2>What This Page Covers</h2>
+                    <p>It combines a modern contact form, responsive grid layout, and a dynamic to-do list so you can strengthen both layout and JavaScript skills.</p>
+                    <ul class="feature-list">
+                        <li>Structured HTML with semantic sections</li>
+                        <li>Flexible styling using Flexbox and CSS Grid</li>
+                        <li>JavaScript validation and DOM updates</li>
+                    </ul>
+                </article>
 
-        <img src="https://via.placeholder.com/300x200" alt="Sample Image">
+                <article class="card">
+                    <h2>Responsive Build</h2>
+                    <div class="mini-grid">
+                        <div class="mini-card">Mobile-first</div>
+                        <div class="mini-card">Reusable cards</div>
+                        <div class="mini-card">Media queries</div>
+                        <div class="mini-card">Clean spacing</div>
+                    </div>
+                </article>
+            </section>
 
-        <p>
-            Learn more about HTML by visiting
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-                MDN Web Docs
-            </a>.
-        </p>
+            <section class="content-grid">
+                <article id="contact" class="card form-card">
+                    <h2>Contact Form</h2>
+                    <form id="contactForm" novalidate>
+                        <div class="field-group">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your name" required>
+                            <span class="error" data-error-for="name"></span>
+                        </div>
 
-        <button onclick="showMessage()">Click Me</button>
-    </main>
+                        <div class="field-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                            <span class="error" data-error-for="email"></span>
+                        </div>
 
-    <script src="script.js"></script>
+                        <div class="field-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us more..." required></textarea>
+                            <span class="error" data-error-for="message"></span>
+                        </div>
 
+                        <button class="primary-btn" type="submit">Send Message</button>
+                        <p id="formMessage" class="form-message" role="status"></p>
+                    </form>
+                </article>
+
+                <article id="todo" class="card todo-card">
+                    <h2>Dynamic To-Do List</h2>
+                    <div class="todo-input-row">
+                        <input id="taskInput" type="text" placeholder="Add a task">
+                        <button id="addTaskBtn" class="secondary-btn" type="button">Add</button>
+                    </div>
+                    <ul id="taskList" class="task-list"></ul>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="skript.js"></script>
 </body>
 </html>
